@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20009bfb0e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="haeder-text">
+            <p>Website Designer</p>
+            <h1>Hi, I'm Garrett Moody<br> From Philadelphia</h1>
+        </div>
+    </div>
+</div>
+<!--------about-------->
+   <div id="about">
+   <div class="container">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/coding.jpg">
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Hi im Garrett Moody. I am currently learning how to code in Upenn's coding 
+                program.After i complete the course my goal it to become a app developer.
+                I have just finished learning html and css and feel i have a good understanding of it.
+                My teachers and tutors have been very helpful and i am excited to
+                continue learning from them. If everything continues to go well i can see 
+                myself obtaining my goal very soon. Thank you to everyone from Upenn for all
+                of your support. </p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>    
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Website Designer</span><br>Designing Web/App interface</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>App Delelopment</span><br>Building Android/IOS apps</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023 - Current</span><br>Full Stack Development at Upenn institute</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2023 - Current</span><br>Full Stack Development at Upenn institute</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+<!-----------services----------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Website Design</h2>
+                <p>Designing Websites</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>IOS Design</h2>
+                <p>Designing Apps</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-android"></i>
+                <h2>Android Design</h2>
+                <p>Designing Apps</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+</body>
+</html>
